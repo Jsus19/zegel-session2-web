@@ -1,34 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About"
+import ClaimBook from "./pages/ClaimBook";
+import NavBarComponent from "./Components/Nav";
 function App() {
   return (
-    <div className='form_container'>
-      <div className='form_header'>
-        <h1 className='form_title'>
-          mi primer formulario
-        </h1>
-      </div>
-      <div className='form_body'>
-        <div className='form'>
-          <label className='form_label'>
-            NOMBRES Y APELLIDOS:
-          </label>
-          <div className='form_input-ico'>
-            <i className='fa fa-user form_ico' aria-hidden="true">
-              <input className='form_input'
-                id="nombre_apellidos"
-                name='nombre_apellidos'>
-
-
-              </input>
-            </i>
-          </div>
-        </div>
-      </div>
+    <div className="form_container">
+    <NavBarComponent/>
+      <BrowserRouter>      
+        <Routes>
+          <Route path='/home' element={<Home/>} />
+          <Route path='/contact' element={<Contact/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/claimbook' element={<ClaimBook/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-
 }
 
 export default App;
