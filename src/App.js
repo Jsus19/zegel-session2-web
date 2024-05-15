@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About"
 import ClaimBook from "./pages/ClaimBook";
+import User from "./pages/User";
 import NavBarComponent from "./Components/Nav";
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/contact' element={<Contact/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/claimbook' element={<ClaimBook/>}/>
+          <Route path='/user' element={<User/>}/>
         </Routes>
       </BrowserRouter>
     </div>
